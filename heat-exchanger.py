@@ -162,9 +162,13 @@ q = eff * C_min * (T_h_i - T_c_i) # heat transfer rate, W
 
 delP_1 = 4 * (fricfac(Re_1) * L_t / d_i + 1) * N_p * 1/2 * rho_1 * v_1**2 # oil pressure loss, kPa
 delP_2 = fricfac(Re_2) * D_s / D_e * (N_b + 1) * 1/2 * rho_2 * v_2**2 # coolant pressure loss, kPa
+print('Engine oil pressure loss:', delP_1, 'kPa')
+print('Engine coolant pressure loss:', delP_2, 'kPa')
+print('')
 
 beta = (A_o + A_i) / (np.pi * D_s**2 / 4 * L_t) # surface density, m**2/m**3
-
+print('Surface density:', beta, 'm^2/m^3')
+print('Heat transfer rate', q, 'W')
 
 
 
